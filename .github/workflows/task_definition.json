@@ -47,7 +47,7 @@
     "requiresCompatibilities": ["FARGATE"],
     "cpu": "256",
     "memory": "512",
-    "registeredAt": "2023-09-30T18:42:51.145Z",
+    "registeredAt": "2023-09-30T19:00:47.713Z",
     "registeredBy": "arn:aws:iam::162268681047:user/cloud-user",
     "tags": []
 }
