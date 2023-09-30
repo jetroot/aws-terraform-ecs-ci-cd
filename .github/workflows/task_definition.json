@@ -8,7 +8,7 @@
             "memory": 512,
             "portMappings": [
                 {
-                    "containerPort": 5173,
+                    "containerPort": 80,
                     "hostPort": 80,
                     "protocol": "tcp"
                 }
@@ -47,7 +47,7 @@
     "requiresCompatibilities": ["FARGATE"],
     "cpu": "256",
     "memory": "512",
-    "registeredAt": "2023-09-30T07:52:07.385Z",
+    "registeredAt": "2023-09-30T18:42:51.145Z",
     "registeredBy": "arn:aws:iam::162268681047:user/cloud-user",
     "tags": []
 }
