@@ -2,6 +2,7 @@
 resource "aws_ecr_repository" "repo" {
   name                 = "demo"
   image_tag_mutability = "MUTABLE"
+  force_delete         = true
 
   image_scanning_configuration {
     scan_on_push = false
@@ -48,7 +49,7 @@ resource "aws_ecs_task_definition" "my_task_definition" {
 resource "aws_ecs_service" "service" {
   name = "my_service"
 
-  cluster = aws_ecs_cluster.my_cluster.id
+  cluster         = aws_ecs_cluster.my_cluster.id
   task_definition = aws_ecs_task_definition.my_task_definition.arn
 
   desired_count = 1
