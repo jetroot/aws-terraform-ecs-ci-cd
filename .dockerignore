@@ -3,3 +3,4 @@ terraform
 
 .gitignore
 README.md
+Dockerfile
