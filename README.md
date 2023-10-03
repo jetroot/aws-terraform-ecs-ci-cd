@@ -1,27 +1,29 @@
-# React + TypeScript + Vite
+# React + CI/CD + AWS ECS + Terraform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Creating a react app and automate the process of deployment from provisioning the infrastructure with IaC using Terraform to deploying it to AWS ECS (Elastic Container Service) with Github Action using CI/CD Continuous Integration and Continuous Delivery.
 
-Currently, two official plugins are available:
+Used technologies:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React with vite
+- CI/CD with Github Action
+- IaC with Terraform
+- AWS ECS 
 
-## Expanding the ESLint configuration
+## Install
 
 If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+1. Enter terraform directory `cd terraform` 
+2. Run command like this:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+   terraform apply --auto-approve
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+3. Create your own github repo
+4. Create `secrets variables` in your guthub repo
+5. Go to `aws ecs task definition` and get json task definition
+6. Go to `.github/workflows/task_definition.json` and paste that task definition json there.
+
+# Deploy
+Push your code changes to github
